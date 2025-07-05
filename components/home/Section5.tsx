@@ -35,7 +35,7 @@ export default function BentoGridDemo() {
 
 </div>
 
-    <BentoGrid className="max-w-4xl mx-auto ">
+    <BentoGrid className="max-w-4xl mx-auto mb-24">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}

@@ -89,7 +89,7 @@ export default function TechMenuGrid() {
       : techItems.filter((item) => item.category === selected);
 
   return (
-    <div className="px-4 md:px-10 lg:px-20 py-16 bg-white dark:bg-black w-[85%] mx-auto text-center mb-32">
+    <div className="px-4 md:px-10 lg:px-20 py-16 bg-white dark:bg-zinc-950 w-[85%] mx-auto text-center mb-32">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black dark:text-white font-sans my-14">
         <ColourfulText text="Future-Ready Tech" /> for Today and Tomorrow.
       </h1>
