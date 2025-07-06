@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function ContactForm() {
   return (
     <section className="bg-white dark:bg-zinc-950 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl grid grid-cols-1 lg:grid-cols-3 gap-16 w-[75%] mx-auto p-12">
+      <div className="max-w-7xl grid grid-cols-1 lg:grid-cols-3 gap-16 mx-auto p-12">
         {/* Left: Form */}
         <div className="lg:col-span-2">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Contact Us</h2>

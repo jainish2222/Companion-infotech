@@ -1,8 +1,7 @@
-// app/components/TechMenuGrid.tsx (or wherever you prefer)
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import {ColourfulText} from "@/components/ui/colourful-text";
+import { ColourfulText } from "@/components/ui/colourful-text";
 
 const techCategories = [
   "All",
@@ -13,8 +12,8 @@ const techCategories = [
   "AI Tools",
   "E-Commerce",
   "Deployment tools"
-  
 ];
+
 const techItems = [
   // Frontend
   { name: "HTML", category: "Frontend", icon: "/logos/html5.svg" },
@@ -41,7 +40,6 @@ const techItems = [
   // UI/UX
   { name: "Figma", category: "UI/UX", icon: "/logos/figma.svg" },
   { name: "Canva", category: "UI/UX", icon: "/logos/canva.svg" },
-//   { name: "Adobe Photoshop (PS)", category: "UI/UX", icon: "/logos/photoshop.svg" },
   { name: "Adobe XD", category: "UI/UX", icon: "/logos/adobe.svg" },
 
   // App
@@ -50,7 +48,6 @@ const techItems = [
   { name: "Swift", category: "App", icon: "/logos/swift.svg" },
   { name: "Dart", category: "App", icon: "/logos/dart.svg" },
   { name: "React Native", category: "App", icon: "/logos/react.svg" },
-
 
   // AI Tools
   { name: "Claude", category: "AI Tools", icon: "/logos/claude.svg" },
@@ -68,17 +65,22 @@ const techItems = [
   { name: "Netlify", category: "Deployment tools", icon: "/logos/netlify.svg" },
   { name: "AWS", category: "Deployment tools", icon: "/logos/aws.jpg" },
 ];
+
 const categoryColors: { [key: string]: string } = {
-  All: "bg-blue-500",
-  Frontend: "bg-pink-500",
-  Backend: "bg-green-500",
-  "UI/UX": "bg-purple-500",
-  App: "bg-yellow-500",
-  "AI Tools": "bg-indigo-500",
-  "E-Commerce": "bg-red-500",
-  "Deployment tools": "bg-teal-500",
+  All: "bg-blue-600",
+  Frontend: "bg-pink-700",
+  Backend: "bg-green-700",
+  "UI/UX": "bg-purple-700",
+  App: "bg-yellow-400", // Light background
+  "AI Tools": "bg-indigo-700",
+  "E-Commerce": "bg-red-700",
+  "Deployment tools": "bg-teal-700",
 };
 
+const textColorMap: { [key: string]: string } = {
+  App: "text-black", // Use black text on yellow
+  default: "text-white",
+};
 
 export default function TechMenuGrid() {
   const [selected, setSelected] = useState("Frontend");
@@ -106,7 +108,7 @@ export default function TechMenuGrid() {
             onClick={() => setSelected(cat)}
             className={`px-4 py-2 rounded-full text-sm font-medium border transition duration-300 ${
               selected === cat
-                ? `${categoryColors[cat]} text-white`
+                ? `${categoryColors[cat]} ${textColorMap[cat] || textColorMap.default}`
                 : `bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300`
             }`}
           >
