@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/stateful-button"
 export default function ContactForm() {
     const handleClick = () => {
     return new Promise((resolve) => {
-      setTimeout(resolve, 100);
+      setTimeout(resolve, 1000);
     });
   };
   return (
