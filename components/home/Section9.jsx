@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-
+import Image from "next/image";
 const Section10 = () => {
   return (
     <div>
@@ -9,7 +9,13 @@ const Section10 = () => {
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <Link href="#" className="flex items-center">
-                <img src="img/logo.svg" className="mr-3 h-8" alt="Company Logo" />
+              <Image
+                 src="/img/logo.svg"
+                 alt="Company Logo"
+                 width={32}
+                 height={32}
+                 className="mr-3 h-8 w-auto"
+              />
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                   Companion Infotech
                 </span>

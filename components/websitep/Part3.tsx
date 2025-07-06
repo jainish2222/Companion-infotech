@@ -156,7 +156,7 @@ export function GridPattern({
         strokeWidth={0}
         fill={`url(#${patternId})`}
       />
-      {squares && (
+      {/* {squares && (
         <svg x={x} y={y} className="overflow-visible">
           {[...new Set(squares.map(([x, y]: any) => `${x}-${y}`))].map((key) => {
             const [xStr, yStr] = key.split("-");
@@ -174,7 +174,7 @@ export function GridPattern({
             );
           })}
         </svg>
-      )}
+      )} */}
     </svg>
   );
 }
