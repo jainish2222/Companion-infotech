@@ -2,8 +2,13 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-
+import { Button } from "@/components/ui/stateful-button"
 export default function ContactForm() {
+    const handleClick = () => {
+    return new Promise((resolve) => {
+      setTimeout(resolve, 100);
+    });
+  };
   return (
     <section className="bg-white dark:bg-zinc-950 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl grid grid-cols-1 lg:grid-cols-3 gap-16 mx-auto p-12">
@@ -77,12 +82,7 @@ export default function ContactForm() {
               </Link>
               .
             </div>
-            <button
-              type="submit"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-md"
-            >
-              Send message
-            </button>
+              <Button onClick={handleClick}>Send message</Button>
           </form>
         </div>
 
