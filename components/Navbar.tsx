@@ -24,7 +24,7 @@ export default function NavbarDemo() {
   const navItems = [
     { name: "Services", link: "/v1/services" },
     { name: "Products", link: "/v1/products" },
-    { name: "pricing", link: "/v1/pricing/website" },
+    { name: "Pricing", link: "/v1/pricing/website" },
     { name: "About", link: "/v1/about" },
   ];
 

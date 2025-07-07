@@ -117,32 +117,69 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <motion.div
-      onMouseLeave={() => setHovered(null)}
-      className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
-        className,
-      )}
-    >
-      {items.map((item, idx) => (
+  <motion.div
+  onMouseLeave={() => setHovered(null)}
+  className={cn(
+    "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+    className
+  )}
+>
+  {items.map((item, idx) => (
+    <div key={`link-${idx}`} className="relative">
+      <Link
+        onMouseEnter={() => setHovered(idx)}
+        onClick={onItemClick}
+        className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
+        href={item.link}
+      >
+        {hovered === idx && (
+          <motion.div
+            layoutId="hovered"
+            className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
+          />
+        )}
+        <span className="relative z-20">{item.name}</span>
+      </Link>
 
-        <Link
-          onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
-          key={`link-${idx}`}
-          href={item.link}
-        >
-          {hovered === idx && (
-            <motion.div
-              layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
-            />
-          )}
-          <span className="relative z-20">{item.name}</span>
-        </Link>
-      ))}
-    </motion.div>
+      {/* Dropdown menu if item.name is "Pricing" and hovered */}
+{item.name === "Pricing" && hovered === idx && (
+  <motion.div
+    initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -10 }}
+    transition={{ duration: 0.2 }}
+    className="absolute top-10 left-0 mt-2 w-52 rounded-xl border border-gray-200 bg-white shadow-xl dark:border-neutral-700 dark:bg-neutral-900 z-30 overflow-hidden"
+  >
+    <ul className="flex flex-col text-left text-sm font-medium text-white">
+      <Link href="/v1/pricing/website" passHref>
+        <li className="px-4 py-2 bg-zinc-950 hover:bg-pink-500 transition-colors duration-200 cursor-pointer">
+          Website Plan
+        </li>
+      </Link>
+      <Link href="/v1/pricing/shopify" passHref>
+        <li className="px-4 py-2 bg-zinc-950 hover:bg-emerald-500 transition-colors duration-200 cursor-pointer">
+          Shopify Plan
+        </li>
+      </Link>
+      <Link href="/v1/pricing/app" passHref>
+        <li className="px-4 py-2 bg-zinc-950 hover:bg-indigo-500 transition-colors duration-200 cursor-pointer">
+          App Plan
+        </li>
+      </Link>
+      <Link href="/v1/payment" passHref>
+        <li className="px-4 py-2 bg-zinc-950 hover:bg-orange-500 transition-colors duration-200 cursor-pointer">
+          Payment Method
+        </li>
+      </Link>
+    </ul>
+  </motion.div>
+)}
+
+
+    </div>
+  ))}
+</motion.div>
+
   );
 };
 
