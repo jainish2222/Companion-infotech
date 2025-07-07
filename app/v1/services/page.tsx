@@ -1,9 +1,14 @@
-import React from 'react'
+import Unit1 from "@/components/servicesp/Unit1"
+import Unit2 from "@/components/servicesp/Unit2"
+import Unit3 from "@/components/servicesp/Unit3"
 
-const services = () => {
+
+export default function Home() {
   return (
-    <div>services</div>
-  )
+    <>
+      <Unit1 />
+      <Unit2 />
+      <Unit3 />
+    </>
+  );
 }
-
-export default services

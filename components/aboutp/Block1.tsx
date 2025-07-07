@@ -5,11 +5,11 @@ import { ColourfulText } from "@/components/ui/colourful-text";
 const Part3 = () => {
   return (
     <div className="px-4 md:px-10 lg:px-20  bg-white dark:bg-zinc-950 w-[85%] mx-auto text-center mb-20">
-     <section className="flex flex-col-reverse space-x-10 lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-white dark:bg-zinc-950">
+     <section className="flex flex-col-reverse  lg:flex-row items-center justify-between px-6 lg:px-20 py-16 gap-7 bg-white dark:bg-zinc-950">
       {/* SVG / Image on the Left */}
-      <div className="w-full lg:w-1/2 flex justify-center mb-10 lg:mb-0">
+      <div className="w-full lg:w-1/2 flex justify-center mb-10 lg:mb-0 mx-auto">
         <Image
-          src="/img/gift.svg" // replace with your actual SVG path
+          src="/img/gate.svg" // replace with your actual SVG path
           alt="Free Website Offer Illustration"
           width={400}
           height={400}
@@ -20,14 +20,15 @@ const Part3 = () => {
       {/* Text Content on the Right */}
       <div className="w-full lg:w-1/2 text-center lg:text-left">
         <h1 className="text-2xl md:text-3xl lg:text-3xl font-bold text-black dark:text-white font-sans my-4 text-center">
-          <ColourfulText text="Free Website Offer" />
+          <ColourfulText text="Companion Infotech" />
         </h1>
         <p className="text-lg md:text-xl font-bold text-gray-700 dark:text-gray-300 mb-10 max-w-3xl mx-auto lg:mx-0 text-center">
-          (Only For First <span className="text-green-500">5 Clients Only</span>)
+          Powering Businesses with <span className="text-purple-500">Innovative Technological Solutions</span>
         </p>
-        <p className="text-lg md:text-sm text-gray-700 dark:text-gray-300 mb-10 text-center max-w-3xl mx-auto">
-  We're a new team passionate about helping startups and small businesses get online quickly. To build trust and showcase our skills, we're offering <span className="font-semibold text-green-500">free web development</span> for our first few clients. No catch — just high-quality work, done fast, to prove what we can do.
+       <p className="text-base md:text-sm text-gray-700 dark:text-gray-300 mb-10 text-center max-w-3xl mx-auto">
+  We’re <span className="font-semibold text-green-600">Companion Infotech</span>, a new team passionate about helping startups and small businesses get online quickly. To build trust and showcase our skills, we’re offering <span className="font-semibold text-green-500">free web development</span> for our first few clients. No catch — just high-quality work, done fast, to prove what we can do. We also provide <span className="font-medium text-blue-500">UI/UX design</span>, <span className="font-medium text-blue-500">Web/App development</span> (iOS, React Native, and Flutter), <span className="font-medium text-blue-500">desktop application development</span>, and complete <span className="font-medium text-blue-500">Shopify store setup and management</span> — everything you need to launch with confidence.
 </p>
+
       </div>
     </section>
  <div className="py-8 lg:py-18">
@@ -35,13 +36,13 @@ const Part3 = () => {
         {grid.map((feature) => (
           <div
             key={feature.title}
-            className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden"
+            className="relative bg-gradient-to-b dark:from-purple-600 from-lime-400 dark:to-indigo-600 to-yellow-300 p-6 rounded-3xl overflow-hidden"
           >
             <Grid size={20} />
             <p className="text-base font-bold text-neutral-800 dark:text-white relative z-20">
               {feature.title}
             </p>
-            <p className="text-neutral-600 dark:text-neutral-400 mt-4 text-base font-normal relative z-20">
+            <p className="text-black dark:text-white mt-4 text-base font-normal relative z-20">
               {feature.description}
             </p>
           </div>
@@ -57,21 +58,22 @@ export default Part3
 
 const grid = [
   {
-    title: "2-Page Website",
+    title: "Our Vision",
     description:
-      "Get a clean, responsive 2-page website — perfect for showcasing your business or idea.",
+      "We envision ourselves as one of the leading technology consulting and development firms in the digital space, providing world-class services that will propel your business to new heights.",
   },
   {
-    title: "Basic Functionality",
+    title: "Our Mission",
     description:
-      "Includes features like a contact form, responsive navigation, and mobile-friendly layout.",
+      "At Companion Infotech, we are on a mission to become the preferred choice for technology development and consultancy services across the globe, powering business innovation and digitalization across multiple industries and business domains.",
   },
   {
-    title: "Free Deployment",
+    title: "Our Approach",
     description:
-      "We deploy your site to Vercel or Netlify with custom domain setup and CI/CD included.",
-  }
+      "We combine innovation, reliability, and modern technologies to deliver scalable, future-ready solutions. Our team focuses on understanding your unique business needs to build products that truly make a difference.",
+  },
 ];
+
 
 
 
