@@ -11,9 +11,9 @@ export default function PointerHighlightDemo() {
 
         {/* 50% Upfront */}
         <div className="rounded-md p-6">
-          <div className="h-40 w-full rounded-lg bg-gradient-to-r from-yellow-200 to-amber-200 flex flex-col items-center justify-center text-yellow-900">
-            <h1 className="text-4xl font-bold">50%</h1>
-            <h3 className="text-lg font-medium mt-2">Pay Upfront</h3>
+          <div className="h-40 w-full rounded-lg bg-gradient-to-r from-orange-200 to-amber-200 flex flex-col items-center justify-center text-yellow-900">
+            <h1 className="text-4xl font-bold">30%</h1>
+            <h2 className="text-lg font-medium mt-2">Pay Upfront</h2>
           </div>
           <div className="mx-auto mt-4 max-w-lg text-base font-bold tracking-tight md:text-base">
             We start the sprint with a
@@ -26,16 +26,16 @@ export default function PointerHighlightDemo() {
             </PointerHighlight>
             — risk balanced from Day 1.
           </div>
-          <p className="mt-4 text-sm text-neutral-500">
+          <p className="mt-4 text-sm text-black dark:text-white">
             Your investment backs a clear timeline and dedicated effort from our side.
           </p>
         </div>
 
         {/* 50% After Delivery */}
         <div className="rounded-md p-6">
-          <div className="h-40 w-full rounded-lg bg-gradient-to-r from-blue-200 to-sky-200 flex flex-col items-center justify-center text-blue-900">
-            <h1 className="text-4xl font-bold">50%</h1>
-            <h3 className="text-lg font-medium mt-2">Pay After Delivery</h3>
+          <div className="h-40 w-full rounded-lg bg-gradient-to-r from-white to-gray-200 flex flex-col items-center justify-center text-blue-900">
+            <h1 className="text-4xl font-bold">70%</h1>
+            <h2 className="text-lg font-medium mt-2">Pay After Delivery</h2>
           </div>
           <div className="mx-auto mt-4 max-w-lg text-base font-bold tracking-tight md:text-base">
             We deliver first —
@@ -47,16 +47,16 @@ export default function PointerHighlightDemo() {
               <span className="relative z-10">you pay after approval.</span>
             </PointerHighlight>
           </div>
-          <p className="mt-4 text-sm text-neutral-500">
+          <p className="mt-4 text-sm text-black dark:text-white">
             Your satisfaction matters. The second half is paid only once the MVP is in your hands.
           </p>
         </div>
 
         {/* 10% Delay Discount */}
         <div className="rounded-md p-6">
-          <div className="h-40 w-full rounded-lg bg-gradient-to-r from-pink-200 to-red-200 flex flex-col items-center justify-center text-pink-900">
-            <h1 className="text-4xl font-bold text-red-700">10%</h1>
-            <h3 className="text-lg font-medium mt-2 text-red-500">Delay Discount</h3>
+          <div className="h-40 w-full rounded-lg bg-gradient-to-r from-green-100 to-green-200 flex flex-col items-center justify-center text-pink-900">
+            <h1 className="text-4xl font-bold text-red-700">5%</h1>
+            <h2 className="text-lg font-medium mt-2 text-red-500">Delay Discount</h2>
           </div>
           <div className="mx-auto mt-4 max-w-lg text-base font-bold tracking-tight md:text-base">
             For every week we delay,
@@ -69,7 +69,7 @@ export default function PointerHighlightDemo() {
             </PointerHighlight>
             — up to 50%.
           </div>
-          <p className="mt-4 text-sm text-neutral-500">
+          <p className="mt-4 text-sm text-black dark:text-white">
             We stay accountable. If we miss deadlines, you get a discount automatically.
           </p>
         </div>
